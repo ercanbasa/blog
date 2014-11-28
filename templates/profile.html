@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% block Content %}
+
+<p>Name: {{ profile.user.first_name }}</p>
+<p>Last Name: {{ profile.user.last_name }}</p>
+<p>E-Mail: {{ profile.user.email }}</p>
+<p>About Me: {{ profile.about }}</p>
+
+<ul style="overflow:hidden; list-style:none;">
+	<li style="float:left; padding-right:15px;">
+		<a href="{% url profile_update %}">Profile Update</a>
+	</li>
+	<li style="float:left; padding-right:15px;">
+		<a href="{% url password_update %}">Password Update</a>
+	</li>
+	<li style="float:left; padding-right:15px;">
+		<a href="{% url email_update %}">Email Update</a>
+	</li>
+	<li style="float:left; padding-right:15px;">
+		<a href="{% url delete_user %}">Profile Delete</a>
+	</li>
+</ul>
+
+<h2>My Posts</h2>
+
+{% for post in posts %}
+<div>
+	<h2><a href="{% url post_detail post.id %}">{{ post.title }}</a></h2>
+	{% if post.picture %}
+	<img src="{{ MEDIA_URL }}{{ post.picture }}" style="width:500px; height:300px;">
+	<br>
+	{% endif %}
+	{{ post.content }}
+	<br>
+	<br>
+	<span style="float:left; padding-right:15px;">{{ post.author }}</span>
+	<span style="float:left;">Comment({{ post.comment_count }})</span>
+	<span style="float:right;">{{ post.date }}</span>
+</div>
+{% endfor %}
+
+{% endblock %}

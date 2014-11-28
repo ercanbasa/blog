@@ -1,0 +1,13 @@
+<div style="padding:20px;">
+	{% for comment in post_comments %}
+		<p>{{ comment.name }}          {{ comment.date }}</p>
+		<p>{{ comment.content }}</p>
+		<p><a href="{% url comment_to_comment comment.id %}">Comment to this comment!</a></p>
+		<hr>
+		{% for cmmnt in comment.get_children %}
+			<p style="padding-left:20px">{{ cmmnt.name }}          {{ cmmnt.date }}</p>
+			<p style="padding-left:20px">{{ cmmnt.content }}</p>
+			<hr>
+		{% endfor %}
+	{% endfor %}
+	</div>

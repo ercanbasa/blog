@@ -1,0 +1,63 @@
+{% load i18n %}
+
+<html lang="tr_TR">
+	<head>
+		<meta charset="utf-8">
+		<title>Blog</title>
+	</head>
+	<body>
+	<div class="container" style="width:940px;">
+	<div class="header">
+		{% block Header %}
+		<h1>Blog</h1>
+		<ul style="overflow:hidden; list-style:none;">
+			<li style="float:left; padding-right:15px;"><a href="{% url home %}">Home</a></li>
+			{% if user.is_authenticated %}
+				<li style="float:left; padding-right:15px;">
+					<a href="{% url profile %}">Profile</a>
+				</li>
+				<li style="float:left; padding-right:15px;">
+					<a href="{% url create_post %}">Add Post</a>
+				</li>
+				<li style="float:left; padding-right:15px;">
+					<a href="{% url logout %}">Logout</a>
+				</li>
+				<li style="float:right;">
+					{% trans "Wellcome" %}, {{ user.get_full_name }}
+				</li>
+			{% else %}
+				<li style="float:left; padding-right:15px;">
+					<a href="{% url register %}">Register</a>
+				</li>
+				<li style="float:left; padding-right:15px;">
+					<a href="{% url login %}">Login</a>
+				</li>
+			{% endif %}
+		</ul>
+
+		<form action="/i18n/setlang/" method="post">
+			{% csrf_token %}
+			<input name="next" type="hidden" value="{{ request.get_full_path }}" />
+			<select name="language">
+			{% for lang in LANGUAGES %}
+			<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+			{% endfor %}
+			</select>
+			<input type="submit" value="Go" />
+		</form>
+		<hr>
+		{% endblock %}
+	</div>
+	<div class="content" style="margin:10; overflow:hidden;">
+		{% block Content %}
+		{% endblock %}
+	</div>
+	<div class="footer">
+		{% block Footer%}
+		<hr>
+		<h3>Test blog</h3>
+		{% endblock %}
+	</div>
+	</div>
+	</body>
+</html>

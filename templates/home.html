@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block Content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% for post in posts %}
+<div>
+	<h2><a href="{% url post_detail post.id %}">{{ post.title }}</a></h2>
+	{% if post.picture %}
+	<img src="{{ MEDIA_URL }}{{ post.picture }}" style="width:500px; height:300px;">
+	<br>
+	{% endif %}
+	{{ post.content }}
+	<br>
+	<br>
+	<span style="float:left; padding-right:15px;">{{ post.author }}</span>
+	<span style="float:left;">Comment({{ post.comment_count }})</span>
+	<span style="float:right;">{{ post.date }}</span>
+</div>
+{% endfor %}
+
+{% endblock %}

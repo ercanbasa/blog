@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-22 09:35+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/blog/models.py:13
+msgid "Author"
+msgstr "Yazar"
+
+#: apps/blog/models.py:14
+msgid "Title"
+msgstr "Başlık"
+
+#: apps/blog/models.py:15 apps/blog/models.py:41
+msgid "Content"
+msgstr "İçerik"
+
+#: apps/blog/models.py:16
+msgid "Date"
+msgstr "Tarih"
+
+#: apps/blog/models.py:18
+msgid "Post Picture"
+msgstr "Resim"
+
+#: apps/blog/models.py:31 apps/blog/models.py:51
+msgid "Post"
+msgstr "Yazı"
+
+#: apps/blog/models.py:32
+msgid "Posts"
+msgstr "Yazılar"
+
+#: apps/blog/models.py:40
+msgid "Written By"
+msgstr "Yazan"
+
+#: apps/blog/models.py:42
+msgid "Date Started"
+msgstr "Yazım Tarhi"
+
+#: apps/blog/models.py:53 apps/profiles/forms.py:12 apps/profiles/forms.py:40
+msgid "Name"
+msgstr "İsim"
+
+#: apps/blog/models.py:54
+msgid "E-mail"
+msgstr "E-mail"
+
+#: apps/blog/models.py:55 apps/profiles/models.py:23
+msgid "Is Verified ?"
+msgstr "Doğrulandı mı?"
+
+#: apps/blog/models.py:57 apps/profiles/models.py:25
+msgid "Activation Key"
+msgstr "Aktivasyon Anahtarı"
+
+#: apps/blog/models.py:75
+msgid "Post Comment"
+msgstr "Post Yorumu"
+
+#: apps/blog/views.py:45
+msgid "Your comment has been saved successfully."
+msgstr "Yorumunuz başarıyla kaydedildi."
+
+#: apps/blog/views.py:60
+msgid ""
+"Your comment has been saved but it will not be shown beforeyour mail "
+"confirmation."
+msgstr ""
+"Yorumunuz kaydedildi fakat mailinizi doğruladığınız zaman gösterilecektir."
+
+#: apps/blog/views.py:94
+msgid "Your post has been saved successfully!"
+msgstr "Postunuz başarıyla kaydedildi"
+
+#: apps/blog/views.py:116
+msgid "Your comment has been saved successfully!"
+msgstr "Yorumunuz başarıyla kaydedildi"
+
+#: apps/blog/views.py:123
+msgid "This comment is already activated"
+msgstr "Bu yorum zaten aktif"
+
+#: apps/blog/views.py:128
+msgid "Your post has been activated successfully!"
+msgstr "Yorumunuz başarıyla aktif edildi"
+
+#: apps/profiles/forms.py:11 apps/profiles/forms.py:62
+msgid "E-Mail"
+msgstr "E-mail"
+
+#: apps/profiles/forms.py:13 apps/profiles/forms.py:41
+msgid "Last Name"
+msgstr "Soyad"
+
+#: apps/profiles/forms.py:14 apps/profiles/models.py:21
+msgid "About Me"
+msgstr "Hakkımda"
+
+#: apps/profiles/forms.py:16
+msgid "Password"
+msgstr "Şifre"
+
+#: apps/profiles/forms.py:18
+msgid "Password (Again)"
+msgstr "Şifre (Tekrar)"
+
+#: apps/profiles/forms.py:26
+msgid "Passwords do not match."
+msgstr "Şifreler eşleşmedi"
+
+#: apps/profiles/forms.py:35
+msgid "E-Mail is already used."
+msgstr "Bu e-mail zaten kayıtlı."
+
+#: apps/profiles/forms.py:54
+msgid ""
+"Please enter a correct e-mail and password. Note that both fields may be "
+"case-sensitive."
+msgstr "Lütfen doğru bir e-mail ve şifre giriniz. Her iki alanın da "
+"büyük/küçük harf duyarlı olduğunu unutmayınız."
+
+#: apps/profiles/forms.py:56
+#, fuzzy
+msgid "This account is inactive."
+msgstr "Bu yorum zaten aktif"
+
+#: apps/profiles/forms.py:63
+msgid "E-Mail (Again)"
+msgstr "E-Mail (Tekrar)"
+
+#: apps/profiles/forms.py:71
+msgid "E-Mails do not match."
+msgstr "E-Mailler eşleşmedi."
+
+#: apps/profiles/models.py:20
+msgid "User"
+msgstr "Kullanıcı"
+
+#: apps/profiles/models.py:22
+msgid "Is Deleted ?"
+msgstr "Silindi Mi ?"
+
+#: apps/profiles/views.py:57
+msgid ""
+"Your profile has been created! Confirm your account with activation key from "
+"your mail."
+msgstr "Hesabınız oluşturuldu. Mailinizi doğrulayınız."
+
+#: apps/profiles/views.py:131
+msgid "Your profile has been updated successfully!"
+msgstr "Profiliniz Başarıyla güncellendi"
+
+#: apps/profiles/views.py:163
+msgid "Your email has been updated! Please confirm your email."
+msgstr "E-Mailiniz güncellendi. Lütfen doğrulayınız."
+
+#: apps/profiles/views.py:175
+msgid "This profile is already activated"
+msgstr "Bu profil zaten aktif."
+
+#: apps/profiles/views.py:182
+msgid "Your profile has been activated successfully!"
+msgstr "Profiliniz başarıyla aktif edildi."
+
+#: apps/profiles/views.py:195
+msgid "Your account has been deleted!"
+msgstr "Hesabınız silindi."
+
+#: templates/base.html:26
+msgid "Wellcome"
+msgstr "Hoşgeldiniz"

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+{% load i18n %}
+
+{% block Content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div>
+	<h2>{{ post.title }}</h2>
+	{% if post.picture %}
+	<img src="{{ MEDIA_URL }}{{ post.picture }}" style="width:500px; height:300px;">
+	<br>
+	{% endif %}
+	{{ post.content }}
+	<br>
+	<br>
+	<span style="float:left;">Author: {{ post.author }}</span>
+	<span style="float:right;">Post Date: {{ post.date }}</span>
+	<br>
+	<br>
+</div>
+<br>
+
+{% comment_tree post as tree %}
+
+{{ tree|safe }}
+
+<div>
+	<h3>Write a new comment</h3>
+<form action="{% url post_detail pk=post.pk %}" method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+<input type="submit">
+</form>
+</div>
+
+{% endblock %}
